@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dev Harry Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container pt-5 text-center" id="WebName"> Puppy Pals Pizzaria! </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 card mt-4 offset-md-3">
+      <h1>Pizza Order on X</h1> 
+      <form>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input id="inputUserName" type="text" class="form-control" placeholder="X handle" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      
+<!--     Radio check buttons Crust selection -->
+        <div class="form-check" id = "Crust">
+          <div>
+            <h2>Please Chose Your Crust</h2>
+          <input type="radio" class="form-check-input" id="handTossed" name="Crust" value="Hand Tossed" checked>Hand Tossed
+            <label class="form-check-label" for="handTossed"></label>
+            </div>
+          <div>
+           <input type="radio" class="form-check-input" id="deepDish" name="Crust" value="Deep Dish" checked>Deep Dish
+            <label class="form-check-label" for="deepDish"></label>
+          </div>
+        </div>
+   
+        <hr>
+        
+        <div class="form-check" id = "Sauce">
+          <div>
+            <h2>Please Chose Your Sauce</h2>
+          <input type="radio" class="form-check-input" id="tomato" name="Sauce" value="Tomato" checked>Tomato
+            <label class="form-check-label" for="Tomato"></label>
+          </div>
+          <div>
+          <input type="radio" class="form-check-input" id="deepDish" name="Sauce" value="Garlic" checked>Garlic
+            <label class="form-check-label" for="Garlic"></label>
+            </div>
+        </div>
+        
+        <hr>
+        
+        
+<!--         Check box buttons    Toppings -->
+  <div class="form-check abc" id="tops">
+    <h2>Please Select Your Toppings</h2>
+    <input class="form-check-input" type="checkbox" value="Anchovies" id="checkAnchovies">
+    <label class="form-check-label" for="flexCheckDefault">
+     Anchovies
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="dog" id="checkDog">
+    <label class="form-check-label" for="flexCheckChecked">
+     Dog (why do you think we named it Puppy Pals?)
+    </label>
+  </div>
+   <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="Puperoni" id="checkPuperoni">
+    <label class="form-check-label" for="flexCheckChecked">
+     Puperoni (why do you think we named it Puppy Pals?)
+    </label>
+  </div>
+        <hr>
+<!--         dine in or take out switch -->
+      <div class="form-check form-switch">
+        <h2>Dinning in or Carry Out?</h2>
+  <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+  <label class="form-check-label" for="dineSwitch">Dine In</label>
+</div>  
+        
+    <!-- dropdown Tip amount-->    
+  <select id="tipSelector" class="form-select" aria-label="Default select example">
+    <option selected>Select The Tip Amount Your Want</option>
+    <option value="10">10% (Bad Service)</option>
+    <option value="15">15% (Average Service)</option>
+    <option value="20">20% (I'm getting my nails done buy a 6 year old
+    )</option>
+  </select>
+        <hr>
+     <div id="butnz">  
+       <input id="btnSubmit" class="btn-primary" type="submit" value="Submit">
+       <input id="btnClear" class="btn-primary" type="submit" value="Clear">
+      
+      </form> 
+    </div>
+  </div>
+
+  </div>
+  
+<!--   Submitted order -->
+  <div class="container col-md-4 pt-5 text-center" id="submited">
+    <h1> Submitted Order </h1>
+    <div class="container">
+      <div class="col">
+        <div class=class="col-md-6 card mt-4 offset-md-3">
+          <h2>
+            <p id="orderName">@PuppyHomies</p>
+            <p id="crustType">Crust Type</p>
+            <p id="sauceType">Sauce Type</p>
+            <p id="toppings">Toppings</p>
+            <p id="dineIn">Dining in?</p>
+            <p id="tip">Tip Amoount</p>
+            
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

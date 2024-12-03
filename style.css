@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+#WebName {
+  color: Tomato;
+  text-align: center;
+  font-family: Lobster;
+  font-size: 72px;
+}
+h1 {
+  color: Tomato;
+  text-align: center;
+  font-family: Lobster;
+  font-size: 36px;
+}
+
+h2 {
+  color: Tomato;
+  text-align: center;
+  font-family: Lobster;
+  font-size: 28px;
+}
+
+#submited {
+  background-color: darkgrey;
+}
+
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages2.fanpop.com%2Fimage%2Fphotos%2F14000000%2FDog-Wallpaper-dogs-14051041-1600-1200.jpg&f=1&nofb=1&ipt=ca122106a0de3337bcda4313875a0bc94714c864107841384bf48676f1b344f8&ipo=images");
+    background-size: 100%;
+}
