@@ -1,8 +1,8 @@
-let rickAstley{
-  "order": {
+{
+  "order":{
     "userName": "RickAstley",
-    "crust": "Deep Dish",
-    "sauce": "Garlic",
+    "crust": "Hand Tossed",
+    "sauce": "Tomato",
     "toppings": ["dog", "Puperoni"],
     "dineIn": true,
     "tip": "20"
