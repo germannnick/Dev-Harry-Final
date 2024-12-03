@@ -24,36 +24,27 @@ $(()=> {
    
    //Toppings area.
     var toppings = [];
-    $('.form-check-input abc[type="checkbox"]:checked').each(function() {
+    $('.form-check-input[type="checkbox"]:checked').each(function() {
         toppings.push($(this).val());
     });
 
-    // make array, code snippet from grok.
+    // make array, code snippet from grok. Understand this much better after JS course.
     var toppingsDisplay = toppings.length > 0 ? toppings.join(', ') : "Just Cheese"; //end code snippet.
 
     $('#toppings').text('Toppings: ' + toppingsDisplay);
    
    
-    if ($('#mySwitch').prop('checked')) {
-        $('#dineIn').text("Dining In");
-    } else {
-        $('#dineIn').text("Carryout");
-    }
    
    // if they are dinning in, display tip amount selected
-   if ($('#mySwitch').prop('checked')) {
-        $('#tip').text("Tip= " + $("input[id='tipselector']:checked").val() +"%");
+   let tipAmount = $("#tipSelector").val();
+   if ($('#dineSwitch').prop('checked')) {
+        $('#tip').text("Tip= " + tipAmount +"%");
     } else {
         $('#tip').text("Carryout, No tip needed.");
     }
-
-
-   
-
-   
-
  })
   
 });
+
 
 $("#btnClear").on("click", ()=> {location.reload()});
