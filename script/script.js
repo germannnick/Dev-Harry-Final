@@ -43,8 +43,33 @@ $(()=> {
         $('#tip').text("Carryout, No tip needed.");
     }
  })
+
+ $("#btnClear").on("click", ()=> {location.reload()});
+
+
+ //code form from Grok (fetch function), edited to work for my page.
+$("#btnPrevOrder").on("click", ()=> {
+fetch('prevOrder/rickAstley.json').then(response => response.json()).then(data => {
+// User    
+   document.getElementById('inputUserName').value = data.order.userName;
   
+// Crust
+   document.querySelector(`input[name="Crust"][value="${data.order.crust}"]`).checked = true;
+  
+// Sauce
+  document.querySelector(`input[name="Sauce"][value="${data.order.sauce}"]`).checked = true;
+  
+// Toppings
+  data.order.toppings.forEach(topping => {
+    document.querySelector(`input[value="${topping}"]`).checked = true;
+   });
+  
+// Dine In
+  document.getElementById('dineSwitch').checked = data.order.dineIn;
+  
+// Tip
+  document.getElementById('tipSelector').value = data.order.tip;
+  }).catch(err => console.error('Failed to load JSON:', err));
+
 });
-
-
-$("#btnClear").on("click", ()=> {location.reload()});
+});
