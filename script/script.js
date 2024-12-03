@@ -42,31 +42,18 @@ $(()=> {
    
    // if they are dinning in, display tip amount selected
    if ($('#mySwitch').prop('checked')) {
-        $('#tip').text("Tip= " + "15%");
+        $('#tip').text("Tip= " + $("input[id='tipselector']:checked").val() +"%");
     } else {
         $('#tip').text("Carryout, No tip needed.");
     }
+
+
    
 
    
-//    console.log("User Name Value:", $('#inputUserName').val());  
-   
-//    if($('#checkCat').is(':checked')){
-//      console.log("Checkbox Cat Value:", $('#checkCat').val()); 
-//    }
-   
-//     if($('#checkDog').is(':checked')){
-//      console.log("Checkbox Dog Value:", $('#checkDog').val()); 
-//    }
-   
-//     console.log("Selected Pet Name:",  $('#inputPetNames').find(":selected").val()); 
-  
-   //another one: ( "#myselect option:selected" ).text();
-    
+
  })
   
 });
-$('#btnClear').on('click', (event)=> {
-   event.preventDefault();
-  
-  });
+
+$("#btnClear").on("click", ()=> {location.reload()});
